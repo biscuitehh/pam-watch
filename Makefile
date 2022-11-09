@@ -1,4 +1,4 @@
-VERSION 		= 2
+VERSION         = 2
 LIBRARY_NAME 	= pam_watchid.so
 DESTINATION 	= /usr/local/lib/pam
 TARGET_ARCH     = $(shell uname -m)
