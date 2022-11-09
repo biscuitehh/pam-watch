@@ -1,7 +1,7 @@
 VERSION = 2
 LIBRARY_NAME = pam_watchid.so
 DESTINATION = /usr/local/lib/pam
-TARGET = arm64
+TARGET = arm64-apple-macos11
 
 all:
 	swiftc watchid-pam-extension.swift -o $(LIBRARY_NAME) -target $(TARGET) -emit-library
