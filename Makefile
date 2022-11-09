@@ -1,7 +1,7 @@
 VERSION 		= 2
 LIBRARY_NAME 	= pam_watchid.so
 DESTINATION 	= /usr/local/lib/pam
-TARGET_ARCH	 	:= $(shell uname -m)
+TARGET_ARCH     = $(shell uname -m)
 
 ifeq ($(TARGET_ARCH), arm64)
 	TARGET_OK = OK
