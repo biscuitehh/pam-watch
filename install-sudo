@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if grep "pam_watchid" /etc/pam.d/sudo > /dev/null; then
+  echo "Already configured for sudo."
+  exit
+fi
+
+sed '2i\
+auth       sufficient     pam_watchid.so
+' /etc/pam.d/sudo
