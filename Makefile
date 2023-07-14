@@ -17,3 +17,6 @@ install: $(LIBRARY_NAME)
 install-pam:
 	grep $(LIBRARY_NAME) /etc/pam.d/sudo >/dev/null || echo auth sufficient $(LIBRARY_NAME) | cat - /etc/pam.d/sudo | sudo tee /etc/pam.d/sudo > /dev/null
 	grep $(LIBRARY_NAME) /etc/pam.d/su >/dev/null || echo auth sufficient $(LIBRARY_NAME) | cat - /etc/pam.d/su | sudo tee /etc/pam.d/su > /dev/null
+
+clean:
+	rm $(LIBRARY_NAME)
